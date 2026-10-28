@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LethaForex AI | Gold Trading Technology</title>
+
+<meta name="description"
+content="Discover LethaForex AI, a gold trading robot designed for MetaTrader 5.">
+
+<style>
+:root {
+  --gold: #f5c451;
+  --black: #080a0e;
+  --panel: #11151d;
+  --text: #f5f5f5;
+  --muted: #a9b0bd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #252a33;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 90px 6% 75px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #29200d, transparent 65%);
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid #8f712c;
+  border-radius: 30px;
+  color: var(--gold);
+  font-size: 12px;
+  margin-bottom: 22px;
+}
+
+h1 {
+  font-size: clamp(36px, 7vw, 64px);
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--gold);
+  color: #111;
+  padding: 13px 23px;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  margin-left: 8px;
+}
+
+section {
+  padding: 65px 6%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.section-intro {
+  color: var(--muted);
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #252a33;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.pricing {
+  max-width: 430px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid var(--gold);
+  background: var(--panel);
+  padding: 35px;
+  border-radius: 15px;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--gold);
+  margin: 15px 0;
+}
+
+.price span {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+ul {
+  list-style: none;
+  margin: 22px 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  background: #080a0e;
+  color: white;
+  border: 1px solid #333a46;
+  border-radius: 7px;
+  padding: 14px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+form {
+  max-width: 450px;
+  margin: auto;
+}
+
+form .button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.notice {
+  max-width: 850px;
+  margin: 25px auto 0;
+  padding: 18px;
+  border-left: 3px solid var(--gold);
+  background: #17150f;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#message {
+  margin-top: 15px;
+  color: var(--gold);
+  overflow-wrap: anywhere;
+}
+
+footer {
+  border-top: 1px solid #252a33;
+  padding: 30px 6%;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  nav a {
+    margin: 0 6px;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  .button.secondary {
+    margin: 12px 0 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">LETHAFOREX AI</div>
+
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#license">License</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="badge">MT5 GOLD TRADING TECHNOLOGY</div>
+
+  <h1>
+    Trade smarter with<br>
+    <span class="gold">LethaForex AI</span>
+  </h1>
+
+  <p>
+    A gold trading robot project designed for MetaTrader 5,
+    featuring automated trading strategies and risk-management tools.
+  </p>
+
+  <a href="#features" class="button">Explore the Robot</a>
+
+  <a href="#pricing" class="button secondary">View Pricing</a>
+</section>
+
+<section id="features">
+  <h2 class="section-title">Built for Gold Trading</h2>
+
+  <p class="section-intro">
+    Discover the planned features of our automated trading system.
+  </p>
+
+  <div class="grid">
+
+    <article class="card">
+      <h3>Automated Trading</h3>
+      <p>
+        Designed to execute trades through a compatible
+        MetaTrader 5 Expert Advisor.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Risk Management</h3>
+      <p>
+        Configurable trade-risk targets, stop-loss controls
+        and position-size calculations.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>License Protection</h3>
+      <p>
+        Planned secure license validation for the owner
+        and paying subscribers.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Customer Access</h3>
+      <p>
+        A planned subscription system for customers
+        who want to use the trading robot.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="section-title">Simple Pricing</h2>
+
+  <p class="section-intro">
+    One subscription for access to the planned LethaForex AI service.
+  </p>
+
+  <div class="pricing">
+    <h3>Monthly License</h3>
+
+    <div class="price">
+      R99 <span>/ month</span>
+    </div>
+
+    <ul>
+      <li>✓ Monthly license entitlement</li>
+      <li>✓ Planned MT5 robot access</li>
+      <li>✓ License status checking</li>
+      <li>✓ Customer support information</li>
+    </ul>
+
+    <a href="#license" class="button">Get Started</a>
+
+    <p style="color:#a9b0bd;margin-top:18px;font-size:13px">
+      Payment activation will be added when the payment
+      system is connected.
+    </p>
+  </div>
+</section>
+
+<section id="license">
+  <h2 class="section-title">License Activation</h2>
+
+  <p class="section-intro">
+    The customer license portal will be connected to our
+    secure licensing server.
+  </p>
+
+  <form id="licenseForm">
+    <input
+      type="text"
+      id="licenseKey"
+      placeholder="Enter your license key"
+      maxlength="100"
+      required
+    >
+
+    <button type="submit" class="button">
+      Check License
+    </button>
+
+    <p id="message" role="status"></p>
+  </form>
+
+  <div class="notice">
+    This demonstration form does not activate or verify
+    real licenses. Secure server-side validation will be
+    required before the trading robot can use a license.
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Trade Responsibly</h2>
+
+  <p class="section-intro">
+    Forex and gold trading involve substantial financial risk.
+    Losses can exceed planned risk limits during market gaps
+    or slippage. No profit is guaranteed.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 LethaForex AI. All rights reserved.</p>
+  <p>Independent trading software project. Not affiliated with XM.</p>
+</footer>
+
+<script>
+document.getElementById("licenseForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    document.getElementById("message").textContent =
+      "License verification is not connected yet. Please check back later.";
+  }
+);
+</script>
+
+</body>
+  </html>
